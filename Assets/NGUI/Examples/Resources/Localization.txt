@@ -1,0 +1,81 @@
+﻿KEY,中文,English
+startInput,输入你的昵称,Enter your nickname
+settingLabelVolume,音量：,Volume:
+settingLabelLanguage,语言：,Language:
+settingLabelSetting,设置,Setting
+roomListMessage,选择一个房间或者\n创建你的自己的房间,Choose a room to play\nor create your own room!
+roomListCreate,创建！,Create!
+roomListNoRoom,当前没有任何房间……\n\n你可以创建你自己的房间,There are no rooms now.\n\nYou can create your own room.
+roomListNoConnection, 不能连接到服务器……\n\n请检查你的网络连接\n\n并重启游戏。,Can not connect\n\nto the server...\n\nPlease check your network\n\nand restart the game.
+roomRoom,房间：,Room:
+roomBack,返回,Back
+roomConfirm,确认,Confirm!
+roomMessage,选择你的角色来开始游戏！,Choose your character to start your journey!
+gameDice,掷骰子,Dice!
+gameHealth,健康值：,Health:
+gameIntell,智力值：,Intellig..:
+gameCredits,学分：,Credits:
+gameDeposit,存款：,Deposit:
+ATMSaveTitle,存钱,SAVE
+ATMSaveDeposit,存款：,money in bank:
+ATMSaveCash,现金：,your cash:
+ATMSaveConfirm,确认存钱,Save!
+ATMMessage,这里你可以存钱获利（每回合10%），但如果你现金少于或等于0，你将因为破产出局。,Here you can store cash to gain the interest  ( 10% per round ). But remember if your cash in your pocket is equal or less than 0 you will be out.
+ATMDeposit,存款：,money in bank:
+ATMCash,现金：,your cash:
+ATMWithdraw,取钱,Withdraw
+ATMSave,存钱,Save
+BusMessage,欢迎来到巴士站，\n你想去哪里呢？,Welcome to the bus station.\nWhere do you want to go?
+BusGo,出发！,GO!
+BusLeave,离开,Leave
+BusDest,目的地：,Destination:
+DormitoryTitle,宿舍楼,Dormitory
+DormitoryMessage,这宿舍楼还没有主人，它的价格是$1500。你可以选择：,This domitory building has no owner yet. Now its price is $1500. you can choose what to do here:
+DormitoryPurchase,购买,Purchase
+DormitoryRest,休息(+能量),Rest (+energy)
+DormitoryStudy,学习(+学分),Study (+credit)
+Dark,你来到了小黑屋，\n你必须在这里停一回合！,You came to the dark room. \nYou have to stay here for a round.
+DiceCard,选择你要掷的点数,Now choose the number \nyou want to dice!
+CanteenTitle,餐厅,Canteen
+CanteenMessage,你现在想吃饭吗？(财富-300;能量+20;健康+3),Do you want to have a meal now?(wealth-300;energy+20;health+3)
+CanteenConfirm,吃一顿,Have a meal
+EntertainTitle,娱乐区,ENTERTAINMENT
+EntertainMessage,这里是娱乐区，要不要放松一下？(能量+15;健康+5;智力+5),Here is entertainment district.Do you want to relax yourself now?(energy+15;health+5;intelligence+5)
+EntertainConfirm,放松一下,Have a relax
+ExerciseInfo,你想现在锻炼一下吗？(能量-15;健康+20),Do you want to exercise now?(energy-15;health+20)
+YES,好的,YES
+NO,不要,NO
+GameoverTitle,游戏结束啦！,GAMEOVER!
+GameoverLabel,  排名 昵称   得分   财富    健康    GPA,  rank   name   score   wealth   health   GPA
+GameTitle,游戏区,GAME
+GameInfo,这里是游戏区，你想现在玩游戏吗？\n\n(能量-5;健康-5;智力+5),Here is the game district.Do you want to play video games now?(energy-5;health-5;intelligence+5)
+InfirTitle,医务室,Infirmary
+InfirInfo,这里是医务室，你想接受一下治疗吗？(金钱-1500;健康+50;能量+30),Do you want to have treatment now?\n(wealth-1500;health+50;energy+30)
+NetErrorTitle,错误,ERROR
+NetErrorInfo,连接服务器失败…\n请检查你的网络，\n然后重新连接。,Connection lost.\nPlease check your\n network and reconnect.
+NetErrorButton,重 连,Reconnect
+AnnualTitle,年度表彰大会,Annual Commendation Conference
+AnnualLabel,排名         昵称           奖学金,rank         name         SCHOLARSHIP
+StudyInfo,你现在想要学习吗？(能量-10;健康-3;学分+3),Do you want to study now?\n(energy-10;health-3;credits+3)
+TeachingTitle,教学楼,Teaching Building
+TeachingInfo,你来到了教学楼，你是否要去上课？(学分+5;健康-5;能量-15),Here you come to the teaching building. Do you want to take a class?(credits+5; health-5; energy-15)
+TollTitle,宿舍楼,DORMITORY
+TollMessage,这栋宿舍楼已经有主了，你不得已向他交了路费！,This domitory building has been owned. You have paid the toll to the owner !
+TollOwner,主人：,Owner:
+TollLevel,楼房等级：,House Level:
+TollToll,支付路费：,TollPaid:
+TollStudy,学习(+学分),Study (+credit)
+TollRest,休息(+能量),Rest (+energy)
+UpgradeTitle,宿舍楼,DORMITORY
+UpgradeInfo,这栋宿舍楼是你的，\n你可以选择做：,This domitory building is yours. You can decide what to do here:
+UpgradeLevel,楼房等级：,House Level:
+UpgradeCost,升级费用：,Cost of Upgrade: 
+UpgradeUpgrade,升级！,Upgrade !
+UpgradeStudy,学习(+学分),Study (+credit)
+UpgradeRest,休息(+能量),Rest (+energy)
+UpgradeLeave,离开,Leave
+WorkTitle,工作区,WORK
+WorkInfo,这里是工作区，你可以在这里挣钱。在这里工作吗？(财富+1000; 能量-20; 健康-10),Here is the place where you can work for money. Do you want to work now?(wealth+1000; energy-20; health-10)
+CreateInfo,输 入 房 间 名 ：,Enter the room name:
+CreateInput,点击这里输入,Press here to type
+CreateConfirm,确 认,Confirm

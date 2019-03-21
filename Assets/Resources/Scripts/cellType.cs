@@ -1,0 +1,19 @@
+public enum CellType{
+	empty,
+	busStation,
+	ATM,
+	darkRoom,
+	diningHall,
+	entertainment,
+	exercise,
+	fortune,
+	galleryRoad,
+	game,
+	healthCenter,
+	house,
+	library,
+	misfortune,
+	shop,
+	teachBuilding,
+	work
+}
