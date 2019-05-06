@@ -1,7 +1,7 @@
 package server.logic;
 
 import server.base.Protocol;
-import server.connection.AfterDoThis;
+import server.connection.AfterDoingThis;
 import server.connection.Conn;
 import server.connection.ServeNet;
 import server.model.Player;
@@ -10,7 +10,7 @@ import server.model.RoomManager;
 import server.util.Constant;
 import java.util.Objects;
 
-class RegisterProtocol implements AfterDoThis {
+class RegisterProtocol implements AfterDoingThis {
 
     private ServeNet serveNet;
 

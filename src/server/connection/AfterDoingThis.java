@@ -1,6 +1,6 @@
 package server.connection;
 
-public interface AfterDoThis {
+public interface AfterDoingThis {
     void action(Conn conn);
     void fail(Conn conn);
 }

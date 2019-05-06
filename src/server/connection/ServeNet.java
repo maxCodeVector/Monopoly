@@ -22,7 +22,7 @@ public class ServeNet {
     private Handle handleVIP = new HandleVIP();
     private Map<String, Event> eventList;
     private int port = Constant.conf.port;
-    AfterDoThis afterDoThis;
+    AfterDoingThis afterDoThis;
 
     private ServeNet() {
 //        serverSocket = new ServerSocket(port);
@@ -52,11 +52,11 @@ public class ServeNet {
         this.eventList.put(protocolName, event);
     }
 
-    public void afterInstance(AfterDoThis afterInstance){
+    public void afterInstance(AfterDoingThis afterInstance){
         afterInstance.action(null);
     }
 
-    public void setAfterDoThis(AfterDoThis afterInstance){
+    public void setAfterDoThis(AfterDoingThis afterInstance){
         this.afterDoThis = afterInstance;
     }
 
