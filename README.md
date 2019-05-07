@@ -8,7 +8,23 @@ Use serveNet.getInstance() to get the single-ton instance. User can set port, pr
 
 **Example**
 ```java
+package server.logic;
 
+import server.connection.AfterDoingThis;
+import server.connection.ServeNet;
+
+public class MonoServer {
+
+    public static void main(String args[]){
+        ServeNet serveNet = ServeNet.getInstance();
+        serveNet.setPort(12000);   // user can only set port once unless throw exception
+        AfterDoingThis afterAction = new RegisterProtocol(serveNet);  // implement inteface AfterDoingThis
+        serveNet.afterInstance(afterAction);    // will invoke action() immdiately usually used for register new protocol.
+        serveNet.setAfterDoThis(afterAction);   // will invoke fail() when connection closed.
+        serveNet.start();   // server start running
+    }
+
+}
 ```
 
 ### Protocol
