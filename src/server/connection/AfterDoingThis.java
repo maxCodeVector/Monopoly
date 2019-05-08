@@ -1,6 +1,13 @@
 package server.connection;
 
 public interface AfterDoingThis {
-    void action(Conn conn);
+
+
+
+    void action(ServeNet serveNet);
     void fail(Conn conn);
+
+
+
+
 }

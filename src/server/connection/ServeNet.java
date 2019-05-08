@@ -10,6 +10,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class ServeNet {
@@ -22,12 +24,13 @@ public class ServeNet {
     private Handle handleVIP = new HandleVIP();
     private Map<String, Event> eventList;
     private int port = Constant.conf.port;
-    AfterDoingThis afterDoThis;
+    List<AfterDoingThis> after;
 
     private ServeNet() {
 //        serverSocket = new ServerSocket(port);
         connPool = new Conn[Constant.conf.maxConn];
         eventList = new HashMap<>();
+        after = new LinkedList<>();
     }
 
     public void setPort(int port){
@@ -53,11 +56,10 @@ public class ServeNet {
     }
 
     public void afterInstance(AfterDoingThis afterInstance){
-        afterInstance.action(null);
-    }
-
-    public void setAfterDoThis(AfterDoingThis afterInstance){
-        this.afterDoThis = afterInstance;
+        if(afterInstance!=null) {
+            this.after.add(afterInstance);
+            afterInstance.action(this);
+        }
     }
 
     /**

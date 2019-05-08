@@ -73,9 +73,8 @@ public class Conn implements Runnable {
         } finally {
             System.out.println("no heart, try close:" + getAddress());
             isUse = false;
-            AfterDoingThis afterDoThis = ServeNet.getInstance().afterDoThis;
-            if(afterDoThis!=null){
-                afterDoThis.fail(this);
+            for(AfterDoingThis afterDoingThis: ServeNet.getInstance().after){
+                afterDoingThis.fail(this);
             }
         }
     }
