@@ -10,18 +10,17 @@ Use serveNet.getInstance() to get the single-ton instance. User can set port, pr
 ```java
 package server.logic;
 
-import server.connection.AfterDoingThis;
+import server.base.ServerApplication;
+import server.connection.LaunchServer;
 import server.connection.ServeNet;
 
+@ServerApplication
 public class MonoServer {
 
     public static void main(String args[]){
         ServeNet serveNet = ServeNet.getInstance();
-        serveNet.setPort(12000);   // user can only set port once unless throw exception
-        AfterDoingThis afterAction = new RegisterProtocol(serveNet);  // implement inteface AfterDoingThis
-        serveNet.afterInstance(afterAction);    // will invoke action() immdiately usually used for register new protocol.
-        serveNet.setAfterDoThis(afterAction);   // will invoke fail() when connection closed.
-        serveNet.start();   // server start running
+        serveNet.setPort(12000);
+        LaunchServer.launch(MonoServer.class, args);
     }
 
 }
@@ -37,6 +36,9 @@ It has defined 4 types of protocol (String, byte, number).
 void action(Conn conn);
 void fail(Conn conn);
 ```
+
+### Notation
+It use Notation `@ServerApplication` to launch a server, use @Action can register some action (The register class need to implement interface AfterDoingThis) automatically. So it's easy to add more logic in server.
 
 ### Acknowledge
 
