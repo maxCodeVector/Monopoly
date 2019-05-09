@@ -19,7 +19,7 @@ public class MonoServer {
 
     public static void main(String args[]){
         ServeNet serveNet = ServeNet.getInstance();
-        serveNet.setPort(12000);
+        serveNet.setPort(12000);  // set port, also can set it in configuration file.
         LaunchServer.launch(MonoServer.class, args);
     }
 
@@ -30,15 +30,25 @@ public class MonoServer {
 It has defined 4 types of protocol (String, byte, number).
 
 
-### Inteface: `AfterDoingThis`
+### Inteface: 
+- `AfterDoingThis`
 
 ```java
 void action(Conn conn);
 void fail(Conn conn);
 ```
 
-### Notation
-It use Notation `@ServerApplication` to launch a server, use @Action can register some action (The register class need to implement interface AfterDoingThis) automatically. So it's easy to add more logic in server.
+- `Event`
+```java
+void HandleEvent(Protocol protocol, Conn conn);
+```
+
+### Annotation
+- `@ServerApplication`:
+to launch a server, if the main class does not have this annotaion, Lancher will do nothing.
+
+- @Action:
+Use it to register some action automatically. So it's easy to add more logic in server (The register class need to implement interface `AfterDoingThis` or `Event`).
 
 ### Acknowledge
 
