@@ -49,6 +49,9 @@ public class LaunchServer {
         Object o = z.newInstance();
         if(o instanceof AfterDoingThis) {
             serveNet.afterInstance((AfterDoingThis) o);
+        }else if(o instanceof Event){
+            String protocolType = ((Action)z.getAnnotation(Action.class)).value();
+            serveNet.addEvent(protocolType, (Event) o);
         }
     }
     /**
