@@ -10,5 +10,6 @@ public class TestAction implements Event {
     @Override
     public void handleEvent(Protocol protocol, Conn conn) {
         System.out.println("Hello, this is my test action");
+        conn.sendMsg(protocol.SendMsg("Hello, I have receive your message\n"));
     }
 }

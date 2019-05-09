@@ -55,7 +55,7 @@ public class ServeNet {
         this.eventList.put(protocolName, event);
     }
 
-    public void afterInstance(AfterDoingThis afterInstance){
+    void afterInstance(AfterDoingThis afterInstance){
         if(afterInstance!=null) {
             this.after.add(afterInstance);
             afterInstance.action(this);

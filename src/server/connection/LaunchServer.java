@@ -12,7 +12,7 @@ import java.util.*;
 
 public class LaunchServer {
 
-    static ClassLoader classLoader = new ClassLoader() {
+    private static ClassLoader classLoader = new ClassLoader() {
         @Override
         public Class<?> loadClass(String name) throws ClassNotFoundException {
             return super.loadClass(name);
@@ -52,7 +52,10 @@ public class LaunchServer {
         }else if(o instanceof Event){
             String protocolType = ((Action)z.getAnnotation(Action.class)).value();
             serveNet.addEvent(protocolType, (Event) o);
-        }
+        }else
+            throw new IllegalAccessException(
+                    String.format("The class must implement %s or %s",
+                            AfterDoingThis.class.getName(), Event.class.getName()));
     }
     /**
      * 从包package中获取所有的Class
@@ -85,12 +88,8 @@ public class LaunchServer {
     }
 
     private static void addClass(Set<Class<?>> classes, String filePath, String packageName) throws Exception {
-        File[] files = new File(filePath).listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File file) {
-                return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory();
-            }
-        });
+        File[] files = new File(filePath).listFiles(file -> (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory());
+        assert files != null;
         for (File file : files) {
             String fileName = file.getName();
             if (file.isFile()) {
