@@ -4,7 +4,7 @@ This is the server for game sutech-monopoly originally. However, it can be refat
 This is write by pure java use java thread and serverSocket. User can define there own protocol and message format.
 
 ### Usage
-Use serveNet.getInstance() to get the single-ton instance. User can set port, protocol type (default is byte protocol) and the follow action.
+Use serveNet.getInstance() to get the single-ton instance. User can set port, protocol type (default is byte protocol) and the following action.
 
 **Example**
 ```java
@@ -27,7 +27,7 @@ public class MonoServer {
 ```
 
 ### Protocol
-It has defined 4 types of protocol (String, byte, number).
+It has defined 3 types of protocol (String, byte, number).
 
 
 ### Inteface: 
@@ -47,7 +47,7 @@ void HandleEvent(Protocol protocol, Conn conn);
 - `@ServerApplication`:
 to launch a server, if the main class does not have this annotaion, Lancher will do nothing.
 
-- @Action:
+- `@Action`:
 Use it to register some action automatically. So it's easy to add more logic in server (The register class need to implement interface `AfterDoingThis` or `Event`).
 
 ### Acknowledge
