@@ -79,7 +79,7 @@ public class VIPClient {
     public static void main(String[] args) throws IOException {
         System.out.println("I am a client " + new Date());
         Socket client;
-        if (args.length > 0) {
+        if (args.length == 2) {
             client = new Socket(args[0], Integer.parseInt(args[1]));
             new Thread(() -> {
                 try {

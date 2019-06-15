@@ -5,7 +5,7 @@ import server.util.Constant;
 
 public class Player {
 
-    private static Constant.BitMap idPool = Constant.getBitMap(1024);
+    public static Constant.BitMap idPool = Constant.getBitMap(1024);
 
     public int id;
     private Conn conn;
@@ -45,6 +45,7 @@ public class Player {
 
     public void logout() {
         this.conn = null;
+        idPool.removeId(id);
         state = Constant.Status.LINE_OFF;
         RoomManager.adjustRoomList(room.id);
     }

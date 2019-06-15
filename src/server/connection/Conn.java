@@ -2,6 +2,7 @@ package server.connection;
 
 import server.base.Protocol;
 import server.model.Player;
+import server.model.Room;
 import server.util.Constant;
 import server.util.DEUtil;
 
@@ -133,4 +134,12 @@ public class Conn implements Runnable {
         }
     }
 
+    public String getIdPoolMsg() {
+        StringBuilder sb = new StringBuilder();
+        String roomInfo = Room.idPool.toString();
+        String playerInfo = Player.idPool.toString();
+        sb.append("RoomId left:").append(roomInfo).append('\n');
+        sb.append("playerId left:").append(playerInfo);
+        return sb.toString();
+    }
 }

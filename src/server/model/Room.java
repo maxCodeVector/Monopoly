@@ -10,7 +10,7 @@ public class Room {
     public final static int MAX_SCORE = 5;
     private final static int[] RANK = {4000, 3000, 2000, 1000};
 
-    static Constant.BitMap idPool = Constant.getBitMap(1024);
+    public static Constant.BitMap idPool = Constant.getBitMap(1024);
     private static Comparator<ScoreDesc> myCompa = (o1, o2) -> Float.compare(o2.score, o1.score);
 
     public int id;

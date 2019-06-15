@@ -54,8 +54,8 @@ public class LaunchServer {
             serveNet.addEvent(protocolType, (Event) o);
         }else
             throw new IllegalAccessException(
-                    String.format("The class must implement %s or %s",
-                            AfterDoingThis.class.getName(), Event.class.getName()));
+                    String.format("Class %s must implement %s or %s",
+                            z.getName(), AfterDoingThis.class.getName(), Event.class.getName()));
     }
     /**
      * 从包package中获取所有的Class

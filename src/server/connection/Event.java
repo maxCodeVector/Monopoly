@@ -1,7 +1,6 @@
 package server.connection;
 
 import server.base.Protocol;
-import server.connection.Conn;
 
 public interface Event {
 

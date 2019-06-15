@@ -1,5 +1,7 @@
 package server.client;
 
+import java.util.*;
+
 public class testERROR {
 
     private interface PrintN{
@@ -41,12 +43,26 @@ public class testERROR {
         throw new Exception();
     }
 
+
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+
+
+
+        return 0;
+    }
+
+
     public static void main(String[] args){
-        PN pn = new testERROR().new PN(50);
-        Thread t1 = new Thread(pn);
-        Thread t2 = new Thread(pn);
-        t1.start();
-        t2.start();
+
+        testERROR t = new testERROR();
+        System.out.println(t.findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
+
+//        PN pn = new testERROR().new PN(50);
+//        Thread t1 = new Thread(pn);
+//        Thread t2 = new Thread(pn);
+//        t1.start();
+//        t2.start();
     }
 
 }

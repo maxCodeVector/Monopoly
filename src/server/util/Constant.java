@@ -71,9 +71,13 @@ public final class Constant {
 
     public static class BitMap {
         private int record[];
+        private int leftIdNum;
+        private int size;
 
         private BitMap(int maxNum) {
             record = new int[(maxNum >>> 5) + 1];
+            leftIdNum = 0;
+            size = maxNum;
         }
 
         public boolean hasId(int id) {
@@ -97,11 +101,13 @@ public final class Constant {
 
         public String toString() {
             StringBuilder sb = new StringBuilder();
+            this.leftIdNum = 0;
             for (int i = 0; i < record.length; i++) {
                 int re = record[i];
                 int bias = 0;
                 while (re != 0) {
                     if ((re & 0x1) == 1) {
+                        this.leftIdNum ++;
                         sb.append((i << 5) + bias);
                         sb.append(',');
                     }
@@ -109,7 +115,7 @@ public final class Constant {
                     re >>>= 1;
                 }
             }
-            return sb.toString();
+            return sb.append('\n').append("id left ").append(size-leftIdNum).toString();
         }
 
     }
