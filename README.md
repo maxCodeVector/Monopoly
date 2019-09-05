@@ -1,12 +1,28 @@
 # Monopoly
 
-This is the server for game `Sutech-Monopoly` originally. However, it can be refator so It can be used for other games' server. This work is try to make it to a framework for those round games that serveral player in a Room.
+This is the server for game `Sutech-Monopoly` originally. However, it can be refator so it can be used for other types of server. This work is try to make it to a framework for those round games that serveral player in a Room.
 This is written by pure java use java thread and serverSocket. User can define there own protocol and message format.
 
-### Usage
-Use serveNet.getInstance() to get the single-ton instance. Then you can set port, protocol type (default is byte protocol) and the following action. It also have default value which are defined in a configuration file. It use server.connection.LaunchServer to lauch a server application.
+### How to use it?
 
-**Example**
+If you want to run this server for the game `sustech-monopoly`, you can directly run compile.sh to compile it with one argument referring the class file output dirctory.
+```
+./build.sh [class dir]
+```
+And run start.sh to run it.
+```
+./start.sh [class dir]
+```
+
+### Extend Usage
+
+This part tell you how to extend this server by adding more function of game or even building another type of server(may be file downloader, I hope so).
+
+- Use serveNet.getInstance() to get the single-ton instance. 
+Then you can set port, protocol type (default is byte protocol) and the following action. It also have default value which are defined in a configuration file. 
+- Use server.connection.LaunchServer to lauch a server application.
+
+**Quik Start**
 ```java
 package server.logic;
 
@@ -74,6 +90,14 @@ to launch a server, if the main class does not have this annotaion, Lancher will
 
 - `@Action`:
 Use it to register some action automatically. So it's easy to add more logic in server (The register class need to implement interface `AfterDoingThis` or `Event`). The class with annotaion `@Action` need to set in the same pakage with Main class.
+
+### Todo
+This server is not a save server alought it need to send heart beat to verify connection live and wrong message type will cause connection broken. However, until now, it use string to translate information. So there are something to do to improve it.
+- 1. Implement the byte protocol, more savely as well as more small pakage need to transfer.
+- 2. Currently, it only support 50 connection(may be more, but it is a constant). We could use asynio to replace the multithreading part (eg, netty).
+- 3. Room function was hide in the low level code, it is not good either, could be abstract similar to the action event.
+
+
 
 ### Acknowledge
 
