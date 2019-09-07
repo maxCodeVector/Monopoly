@@ -1,7 +1,11 @@
 if [ $1 ]; then
 outdir=$1
-rm -rf $outdir
-mkdir $outdir
+  if [ ! -e $outdir ];then
+	  mkdir $outdir
+	  echo "create directory $outdir"
+  else
+	  echo "$outdir exist"
+  fi
 filelist=`ls src/server/logic/*.java`
 for file in $filelist;do
 	echo "build $file"
