@@ -20,6 +20,8 @@ And run start.sh to run it.
 ./start.sh [class dir]
 ```
 
+Then ther server will start running and listen to the requests in port 12000 (you could change the port number in server.logic.MonoServer. As seen below).
+
 ### Extend Usage
 
 This part tell you how to extend this server by adding more function of game or even building another type of server(may be file downloader, I hope so).
