@@ -5,6 +5,12 @@ This is written by pure java use java thread and serverSocket. User can define t
 
 ### How to use it?
 
+#### Client
+
+To install this game, go to repository [SustechMonopoly](https://github.com/Instein98/SustechMonopoly/releases/tag/V1.0.0) to download it in release page. It support windows and android.
+
+#### Server
+
 If you want to run this server for the game `sustech-monopoly`, you can directly run compile.sh to compile it with one argument referring the class file output dirctory.
 ```
 ./build.sh [class dir]
